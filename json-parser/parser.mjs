@@ -1,6 +1,6 @@
 export let p = str => {
     // a minifier will shorten these to a single character, allowing them to more compactly represent builtin functions
-    let [slice,map,split,replace,indexOf,empty,negativeOne] = ["slice","map","split","replace","indexOf","",-1];
+    let [slice,map,split,replace,indexOf,empty,negativeOne] = "slice,map,split,replace,indexOf,,-1".split(",");
     // get rid of leading and trailing whitespace
     str = str[replace](/^\s+|\s+$/g,empty);
 
@@ -49,9 +49,9 @@ export let p = str => {
             [split]("\\\\") // split by escaped backslashes
             [map](s => s 
                 [split]("\\")    // split by escape code
-                [map]((s,i) => i==0?s:s // ignore first segment (does not start with escape code)
+                [map]((s,i) => i?s // ignore first segment (does not start with escape code)
                     [replace](/^(b|f|n|r|t|\/|\")/g,r=>`\b\f\n\r\t\/"`[`bfnrt/"`[indexOf](r)]) // deal with escape codes such as \n
-                    [replace](/^u.{4}/g,r=>String.fromCharCode(parseInt(r[slice](1),16))) // deal with unicode escape codes
+                    [replace](/^u.{4}/g,r=>String.fromCharCode(parseInt(r[slice](1),16))):s // deal with unicode escape codes
                 )
                 .join(empty)   // join back together
             ).join("\\") // re-add escaped backslashes
