@@ -34,6 +34,7 @@ function jsonEq(json1, json2) {
         for (let key of keys1.values()) {
             if (!jsonEq(json1[key], json2[key])) return false;
         }
+        return true;
     }
     return false;
 }
@@ -68,7 +69,12 @@ console.log("Validating...");
 let output = "";
 for (let result of parseResults) {
     output += result.fileName.padEnd(50, " ");
-    output += jsonEq(result.reference, result.golfed) ? "SUCCESS" : "FAIL";
+    const success = jsonEq(result.reference, result.golfed);
+    output += success ? "SUCCESS" : "FAIL";
+    if (!success) {
+        output += "    golfed: " + JSON.stringify(result.golfed) + "   VS    ";
+        output += JSON.stringify(result.reference);
+    }
     output += "\n";
 }
 

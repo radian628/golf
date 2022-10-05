@@ -1,7 +1,7 @@
 export let p = str => {
     // get rid of leading and trailing whitespace
     str = str.replace(/^\s+|\s+$/g,"");
-    
+
     // function that splits an object/array by commas, taking into account objects/arrays inside of it
     let splitByCommas = str => str
         .slice(1,-1) // remove leading/trailing brackets 
@@ -44,8 +44,17 @@ export let p = str => {
         
         // parse string 
         '"': _ => str.slice(1,-1) // eliminate quotes
-            .replace(/\\(b|f|n|r|t|\\|\/)/g,r=>"\b\f\n\r\t\\\/"["bfnrt\\//".indexOf(r[1])]) //backslash escape sequences
-            .replace(/\\u.{4}/g,r=>String.fromCharCode(parseInt(r.slice(2),16))) // unicode escape sequences
+            // .replace(/\\(b|f|n|r|t|\\|\/|\")/g,r=>`\b\f\n\r\t\\\/"`[`bfnrt\\/"`.indexOf(r[1])]) //backslash escape sequences
+            // .replace(/\\u.{4}/g,r=>String.fromCharCode(parseInt(r.slice(2),16))) // unicode escape sequences
+            .split("\\\\")
+            .map(s => s
+                .split("\\")    
+                .map((s,i) => i==0?s:s
+                    .replace(/^(b|f|n|r|t|\/|\")/g,r=>`\b\f\n\r\t\/"`[`bfnrt/"`.indexOf(r)])
+                    .replace(/^u.{4}/g,r=>String.fromCharCode(parseInt(r.slice(1),16)))
+                )
+                .join("")    
+            ).join("\\")
             
         // null parser
         ,"n":_=>null,
