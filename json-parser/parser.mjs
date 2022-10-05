@@ -63,7 +63,7 @@ export let p = str => {
         "t":_=>!0,
         
         // false parser
-        "f":()=>!1
+        "f":_=>!1
     })[str[0]]; // perform lookup
     
     // if lookup succeeded, evalute. If it failed, subtract zero to cast to number
