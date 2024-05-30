@@ -1,95 +1,95 @@
-y_array_arraysWithSpaces.json                     FAIL    golfed: undefined   VS    [[]]
-y_array_empty-string.json                         FAIL    golfed: undefined   VS    [""]
-y_array_empty.json                                FAIL    golfed: undefined   VS    []
-y_array_ending_with_newline.json                  FAIL    golfed: undefined   VS    ["a"]
-y_array_false.json                                FAIL    golfed: undefined   VS    [false]
-y_array_heterogeneous.json                        FAIL    golfed: undefined   VS    [null,1,"1",{}]
-y_array_null.json                                 FAIL    golfed: undefined   VS    [null]
-y_array_with_1_and_newline.json                   FAIL    golfed: undefined   VS    [1]
-y_array_with_leading_space.json                   FAIL    golfed: undefined   VS    [1]
-y_array_with_several_null.json                    FAIL    golfed: undefined   VS    [1,null,null,null,2]
-y_array_with_trailing_space.json                  FAIL    golfed: undefined   VS    [2]
-y_number.json                                     FAIL    golfed: undefined   VS    [1.23e+67]
-y_number_0e+1.json                                FAIL    golfed: undefined   VS    [0]
-y_number_0e1.json                                 FAIL    golfed: undefined   VS    [0]
-y_number_after_space.json                         FAIL    golfed: undefined   VS    [4]
-y_number_double_close_to_zero.json                FAIL    golfed: undefined   VS    [-1e-78]
-y_number_int_with_exp.json                        FAIL    golfed: undefined   VS    [200]
-y_number_minus_zero.json                          FAIL    golfed: undefined   VS    [0]
-y_number_negative_int.json                        FAIL    golfed: undefined   VS    [-123]
-y_number_negative_one.json                        FAIL    golfed: undefined   VS    [-1]
-y_number_negative_zero.json                       FAIL    golfed: undefined   VS    [0]
-y_number_real_capital_e.json                      FAIL    golfed: undefined   VS    [1e+22]
-y_number_real_capital_e_neg_exp.json              FAIL    golfed: undefined   VS    [0.01]
-y_number_real_capital_e_pos_exp.json              FAIL    golfed: undefined   VS    [100]
-y_number_real_exponent.json                       FAIL    golfed: undefined   VS    [1.23e+47]
-y_number_real_fraction_exponent.json              FAIL    golfed: undefined   VS    [1.23456e+80]
-y_number_real_neg_exp.json                        FAIL    golfed: undefined   VS    [0.01]
-y_number_real_pos_exponent.json                   FAIL    golfed: undefined   VS    [100]
-y_number_simple_int.json                          FAIL    golfed: undefined   VS    [123]
-y_number_simple_real.json                         FAIL    golfed: undefined   VS    [123.456789]
-y_object.json                                     FAIL    golfed: undefined   VS    {"asd":"sdf","dfg":"fgh"}
-y_object_basic.json                               FAIL    golfed: undefined   VS    {"asd":"sdf"}
-y_object_duplicated_key.json                      FAIL    golfed: undefined   VS    {"a":"c"}
-y_object_duplicated_key_and_value.json            FAIL    golfed: undefined   VS    {"a":"b"}
-y_object_empty.json                               FAIL    golfed: undefined   VS    {}
-y_object_empty_key.json                           FAIL    golfed: undefined   VS    {"":0}
-y_object_escaped_null_in_key.json                 FAIL    golfed: undefined   VS    {"foo\u0000bar":42}
-y_object_extreme_numbers.json                     FAIL    golfed: undefined   VS    {"min":-1e+28,"max":1e+28}
-y_object_long_strings.json                        FAIL    golfed: undefined   VS    {"x":[{"id":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}],"id":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}
-y_object_simple.json                              FAIL    golfed: undefined   VS    {"a":[]}
-y_object_string_unicode.json                      FAIL    golfed: undefined   VS    {"title":"Полтора Землекопа"}
-y_object_with_newlines.json                       FAIL    golfed: undefined   VS    {"a":"b"}
-y_string_1_2_3_bytes_UTF-8_sequences.json         FAIL    golfed: undefined   VS    ["`Īካ"]
-y_string_accepted_surrogate_pair.json             FAIL    golfed: undefined   VS    ["𐐷"]
-y_string_accepted_surrogate_pairs.json            FAIL    golfed: undefined   VS    ["😹💍"]
-y_string_allowed_escapes.json                     FAIL    golfed: undefined   VS    ["\"\\/\b\f\n\r\t"]
-y_string_backslash_and_u_escaped_zero.json        FAIL    golfed: undefined   VS    ["\\u0000"]
-y_string_backslash_doublequotes.json              FAIL    golfed: undefined   VS    ["\""]
-y_string_comments.json                            FAIL    golfed: undefined   VS    ["a/*b*/c/*d//e"]
-y_string_double_escape_a.json                     FAIL    golfed: undefined   VS    ["\\a"]
-y_string_double_escape_n.json                     FAIL    golfed: undefined   VS    ["\\n"]
-y_string_escaped_control_character.json           FAIL    golfed: undefined   VS    ["\u0012"]
-y_string_escaped_noncharacter.json                FAIL    golfed: undefined   VS    ["￿"]
-y_string_in_array.json                            FAIL    golfed: undefined   VS    ["asd"]
-y_string_in_array_with_leading_space.json         FAIL    golfed: undefined   VS    ["asd"]
-y_string_last_surrogates_1_and_2.json             FAIL    golfed: undefined   VS    ["􏿿"]
-y_string_nbsp_uescaped.json                       FAIL    golfed: undefined   VS    ["new line"]
-y_string_nonCharacterInUTF-8_U+10FFFF.json        FAIL    golfed: undefined   VS    ["􏿿"]
-y_string_nonCharacterInUTF-8_U+FFFF.json          FAIL    golfed: undefined   VS    ["￿"]
-y_string_null_escape.json                         FAIL    golfed: undefined   VS    ["\u0000"]
-y_string_one-byte-utf-8.json                      FAIL    golfed: undefined   VS    [","]
-y_string_pi.json                                  FAIL    golfed: undefined   VS    ["π"]
-y_string_reservedCharacterInUTF-8_U+1BFFF.json    FAIL    golfed: undefined   VS    ["𛿿"]
-y_string_simple_ascii.json                        FAIL    golfed: undefined   VS    ["asd "]
-y_string_space.json                               FAIL    golfed: undefined   VS    " "
-y_string_surrogates_U+1D11E_MUSICAL_SYMBOL_G_CLEF.jsonFAIL    golfed: undefined   VS    ["𝄞"]
-y_string_three-byte-utf-8.json                    FAIL    golfed: undefined   VS    ["ࠡ"]
-y_string_two-byte-utf-8.json                      FAIL    golfed: undefined   VS    ["ģ"]
-y_string_u+2028_line_sep.json                     FAIL    golfed: undefined   VS    [" "]
-y_string_u+2029_par_sep.json                      FAIL    golfed: undefined   VS    [" "]
-y_string_uEscape.json                             FAIL    golfed: undefined   VS    ["aクリス"]
-y_string_uescaped_newline.json                    FAIL    golfed: undefined   VS    ["new\nline"]
-y_string_unescaped_char_delete.json               FAIL    golfed: undefined   VS    [""]
-y_string_unicode.json                             FAIL    golfed: undefined   VS    ["ꙭ"]
-y_string_unicodeEscapedBackslash.json             FAIL    golfed: undefined   VS    ["\\"]
-y_string_unicode_2.json                           FAIL    golfed: undefined   VS    ["⍂㈴⍂"]
-y_string_unicode_U+10FFFE_nonchar.json            FAIL    golfed: undefined   VS    ["􏿾"]
-y_string_unicode_U+1FFFE_nonchar.json             FAIL    golfed: undefined   VS    ["🿾"]
-y_string_unicode_U+200B_ZERO_WIDTH_SPACE.json     FAIL    golfed: undefined   VS    ["​"]
-y_string_unicode_U+2064_invisible_plus.json       FAIL    golfed: undefined   VS    ["⁤"]
-y_string_unicode_U+FDD0_nonchar.json              FAIL    golfed: undefined   VS    ["﷐"]
-y_string_unicode_U+FFFE_nonchar.json              FAIL    golfed: undefined   VS    ["￾"]
-y_string_unicode_escaped_double_quote.json        FAIL    golfed: undefined   VS    ["\""]
-y_string_utf8.json                                FAIL    golfed: undefined   VS    ["€𝄞"]
-y_string_with_del_character.json                  FAIL    golfed: undefined   VS    ["aa"]
-y_structure_lonely_false.json                     FAIL    golfed: undefined   VS    false
-y_structure_lonely_int.json                       FAIL    golfed: undefined   VS    42
-y_structure_lonely_negative_real.json             FAIL    golfed: undefined   VS    -0.1
-y_structure_lonely_null.json                      FAIL    golfed: undefined   VS    null
-y_structure_lonely_string.json                    FAIL    golfed: undefined   VS    "asd"
-y_structure_lonely_true.json                      FAIL    golfed: undefined   VS    true
-y_structure_string_empty.json                     FAIL    golfed: undefined   VS    ""
-y_structure_trailing_newline.json                 FAIL    golfed: undefined   VS    ["a"]
-y_structure_true_in_array.json                    FAIL    golfed: undefined   VS    [true]
-y_structure_whitespace_array.json                 FAIL    golfed: undefined   VS    []
+y_array_arraysWithSpaces.json                     SUCCESS
+y_array_empty-string.json                         SUCCESS
+y_array_empty.json                                SUCCESS
+y_array_ending_with_newline.json                  SUCCESS
+y_array_false.json                                SUCCESS
+y_array_heterogeneous.json                        SUCCESS
+y_array_null.json                                 SUCCESS
+y_array_with_1_and_newline.json                   SUCCESS
+y_array_with_leading_space.json                   SUCCESS
+y_array_with_several_null.json                    SUCCESS
+y_array_with_trailing_space.json                  SUCCESS
+y_number.json                                     SUCCESS
+y_number_0e+1.json                                SUCCESS
+y_number_0e1.json                                 SUCCESS
+y_number_after_space.json                         SUCCESS
+y_number_double_close_to_zero.json                SUCCESS
+y_number_int_with_exp.json                        SUCCESS
+y_number_minus_zero.json                          SUCCESS
+y_number_negative_int.json                        SUCCESS
+y_number_negative_one.json                        SUCCESS
+y_number_negative_zero.json                       SUCCESS
+y_number_real_capital_e.json                      SUCCESS
+y_number_real_capital_e_neg_exp.json              SUCCESS
+y_number_real_capital_e_pos_exp.json              SUCCESS
+y_number_real_exponent.json                       SUCCESS
+y_number_real_fraction_exponent.json              SUCCESS
+y_number_real_neg_exp.json                        SUCCESS
+y_number_real_pos_exponent.json                   SUCCESS
+y_number_simple_int.json                          SUCCESS
+y_number_simple_real.json                         SUCCESS
+y_object.json                                     SUCCESS
+y_object_basic.json                               SUCCESS
+y_object_duplicated_key.json                      SUCCESS
+y_object_duplicated_key_and_value.json            SUCCESS
+y_object_empty.json                               SUCCESS
+y_object_empty_key.json                           SUCCESS
+y_object_escaped_null_in_key.json                 SUCCESS
+y_object_extreme_numbers.json                     SUCCESS
+y_object_long_strings.json                        SUCCESS
+y_object_simple.json                              SUCCESS
+y_object_string_unicode.json                      SUCCESS
+y_object_with_newlines.json                       SUCCESS
+y_string_1_2_3_bytes_UTF-8_sequences.json         SUCCESS
+y_string_accepted_surrogate_pair.json             SUCCESS
+y_string_accepted_surrogate_pairs.json            SUCCESS
+y_string_allowed_escapes.json                     SUCCESS
+y_string_backslash_and_u_escaped_zero.json        SUCCESS
+y_string_backslash_doublequotes.json              SUCCESS
+y_string_comments.json                            SUCCESS
+y_string_double_escape_a.json                     SUCCESS
+y_string_double_escape_n.json                     SUCCESS
+y_string_escaped_control_character.json           SUCCESS
+y_string_escaped_noncharacter.json                SUCCESS
+y_string_in_array.json                            SUCCESS
+y_string_in_array_with_leading_space.json         SUCCESS
+y_string_last_surrogates_1_and_2.json             SUCCESS
+y_string_nbsp_uescaped.json                       SUCCESS
+y_string_nonCharacterInUTF-8_U+10FFFF.json        SUCCESS
+y_string_nonCharacterInUTF-8_U+FFFF.json          SUCCESS
+y_string_null_escape.json                         SUCCESS
+y_string_one-byte-utf-8.json                      SUCCESS
+y_string_pi.json                                  SUCCESS
+y_string_reservedCharacterInUTF-8_U+1BFFF.json    SUCCESS
+y_string_simple_ascii.json                        SUCCESS
+y_string_space.json                               SUCCESS
+y_string_surrogates_U+1D11E_MUSICAL_SYMBOL_G_CLEF.jsonSUCCESS
+y_string_three-byte-utf-8.json                    SUCCESS
+y_string_two-byte-utf-8.json                      SUCCESS
+y_string_u+2028_line_sep.json                     SUCCESS
+y_string_u+2029_par_sep.json                      SUCCESS
+y_string_uEscape.json                             SUCCESS
+y_string_uescaped_newline.json                    SUCCESS
+y_string_unescaped_char_delete.json               SUCCESS
+y_string_unicode.json                             SUCCESS
+y_string_unicodeEscapedBackslash.json             SUCCESS
+y_string_unicode_2.json                           SUCCESS
+y_string_unicode_U+10FFFE_nonchar.json            SUCCESS
+y_string_unicode_U+1FFFE_nonchar.json             SUCCESS
+y_string_unicode_U+200B_ZERO_WIDTH_SPACE.json     SUCCESS
+y_string_unicode_U+2064_invisible_plus.json       SUCCESS
+y_string_unicode_U+FDD0_nonchar.json              SUCCESS
+y_string_unicode_U+FFFE_nonchar.json              SUCCESS
+y_string_unicode_escaped_double_quote.json        SUCCESS
+y_string_utf8.json                                SUCCESS
+y_string_with_del_character.json                  SUCCESS
+y_structure_lonely_false.json                     SUCCESS
+y_structure_lonely_int.json                       SUCCESS
+y_structure_lonely_negative_real.json             SUCCESS
+y_structure_lonely_null.json                      SUCCESS
+y_structure_lonely_string.json                    SUCCESS
+y_structure_lonely_true.json                      SUCCESS
+y_structure_string_empty.json                     SUCCESS
+y_structure_trailing_newline.json                 SUCCESS
+y_structure_true_in_array.json                    SUCCESS
+y_structure_whitespace_array.json                 SUCCESS

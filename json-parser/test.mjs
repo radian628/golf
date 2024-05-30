@@ -68,7 +68,7 @@ console.log("Validating...");
 
 let output = "";
 for (let result of parseResults) {
-    output += result.fileName.padEnd(50, " ");
+    output += result.fileName.padEnd(60, " ");
     const success = jsonEq(result.reference, result.golfed);
     output += success ? "SUCCESS" : "FAIL";
     if (!success) {

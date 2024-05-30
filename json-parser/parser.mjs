@@ -36,7 +36,7 @@ export let p = str => {
         "{": _ => Object.fromEntries( // get object from array of key/value pairs
             splitByCommas(str) // split object properties by commas
             [map](e=>{ // for each object property...
-                let i = e[replace](/"[^"]*"/g, s=>s[replace](/./g,"a"))[indexOf](":"); // find out where key/value split is
+                let i = e[replace](/"[^"]*"/g, s=>s[replace](":","a"))[indexOf](":"); // find out where key/value split is
                 return [p(e[slice](0,i)),p(e[slice](i+1))] // return key/value pair
             })),
 
@@ -57,13 +57,13 @@ export let p = str => {
             ).join("\\") // re-add escaped backslashes
             
         // null parser
-        ,"n":_=>null,
+        ,n:_ => null,
         
         // true parser
-        "t":_=>!0,
+        t: _ => !0,
         
         // false parser
-        "f":_=>!1
+        f: _ => !1
     })[str[0]]; // perform lookup
     
     // if lookup succeeded, evalute. If it failed, subtract zero to cast to number
